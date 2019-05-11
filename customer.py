@@ -10,7 +10,7 @@ class Customer:
         self.transactions = transactions
 
     def add_transaction(self, amount):
-        if amount < 1:
+        if amount <= 0:
             raise ValueError('transaction is < 1')
         self.transactions.append(amount)
 

@@ -11,7 +11,7 @@ class Detector:
 
     def detect_anomaly(self, customer_id, merchant_id, transaction_amount):
         # ignore negative or 0 amount
-        if transaction_amount < 1:
+        if transaction_amount <= 0:
             return
 
         # check if customer already exists
